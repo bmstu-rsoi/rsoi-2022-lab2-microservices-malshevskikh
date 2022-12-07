@@ -27,6 +27,9 @@ jobs:
           docker compose up -d
           ./scripts/wait-script.sh
 
+      - name: Let's wait
+        run: sleep 30
+
       - name: Run API Tests
         uses: matt-ball/newman-action@master
         with:
